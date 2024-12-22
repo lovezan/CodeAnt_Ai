@@ -1,0 +1,250 @@
+Global Styles * {
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Tabs */
+.tabs {
+  width: 100%;
+}
+
+.tabs-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Tabs */
+.tab-trigger {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  /* border-radius: 12px; */
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-trigger:hover {
+  background-color: #eaf4ff;
+  color: #007bff;
+}
+
+/* Buttons */
+div button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+
+  /* background-color: #007bff; */
+  /* border-radius: 12px; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Input Buttons */
+button img {
+  margin-right: 8px;
+}
+
+/* Footer Link */
+.card-footer p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.card-footer p a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Rounded Corners */
+.rounded-lg0 {
+  background-color: #ffffff;
+  border-radius: 30px !important;
+}
+/* Rounded Corners */
+.rounded-lg4 {
+  background-color: #ffffff;
+  border-radius: 30px !important;
+  width: 24rem;
+  height: 10rem;
+}
+/* Rounded Corners */
+.rounded-lg3 {
+  background-color: #ffffff;
+  border-radius: 30px !important;
+  position: relative;
+  width: 16rem;
+  top: -52px;
+  left: 120px;
+}
+/* Rounded Corners */
+.rounded-lg1 {
+  border-radius: 10px !important;
+}
+
+.rounded-full {
+  border-radius: 20% !important;
+}
+
+/* Separator */
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 16px 0;
+}
+s
+
+/* Styling for the second card to make it smaller and shift left */
+.second-card {
+  width: 19rem;
+  position: relative;
+  top: -4rem;
+  left: 8rem;
+}
+
+/* Styling for font size of the '500K+' text */
+.second-card .text-3xl {
+  font-size: 2rem; /* Smaller font size */
+}
+
+/* Optional: Add a minimum height for the first card to make both cards look consistent */
+.first-card {
+  height: 350px;
+}
+
+/* Styling the card content */
+.card-content {
+  padding: 24px; /* Increase padding for content */
+}
+
+/* Style for the top section with gaps and alignment */
+.card-content .top-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-content .top-section h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Style the stat items to align content */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-item .value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat-item .label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.first-section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-content: flex-end;
+  align-items: center;
+  width: 50%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  background-color: #f9fafb; /* Matches bg-gray-50 */
+}
+
+.first-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .first-section {
+    display: none;
+  }
+
+  /* .second-section {
+    display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-content: flex-end;
+  align-items: center;
+  width: 50%;
+  } */
+}
+@media (max-width: 430px) {
+  .first-section {
+    display: none;
+  }
+}
+
+.second-section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-content: flex-end;
+  align-items: center;
+}
+
+.custom-button {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px; /* Add padding for better spacing */
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  justify-content: flex-start; /* Align content to the left */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.2s ease, border-color 0.2s ease; /* Smooth hover effect */
+}
+
+.custom-button:hover {
+  background-color: #eff6ff; /* Light blue hover background */
+  border-color: #3b82f6; /* Blue border on hover */
+}
+
+.button-icon {
+  margin-right: 8px; /* Space between icon and text */
+  width: 20px;
+  height: 20px;
+}
