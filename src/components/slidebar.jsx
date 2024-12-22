@@ -93,10 +93,10 @@ export function Sidebar() {
               {navItems.map((item) => (
                 <div
                   key={item.href}
-                  className={`justify-start w-full cursor-pointer ${
+                  className={`justify-start w-full cursor-pointer rounded-lg5 ${
                     activeLink === item.href
                       ? "bg-blue-600 text-white"
-                      : "text-white-700 hover:bg-blue-50"
+                      : "text-white-700 hover:bg-blue-500"
                   }`}
                   onClick={() => handleLinkClick(item.href)}
                 >
@@ -132,28 +132,32 @@ export function Sidebar() {
           {navItems.slice(0, -2).map((item) => (
             <div
               key={item.href}
-              className={`w-full justify-start cursor-pointer ${
+              className={`w-full justify-start cursor-pointer rounded-lg5 ${
                 activeLink === item.href
                   ? "bg-blue-600 text-white"
-                  : "text-gray-700 hover:bg-blue-50"
+                  : "text-gray-700 hover:bg-blue-500 hover:text-white"
               }`}
               onClick={() => handleLinkClick(item.href)}
             >
-              <Link to={item.href} className="text-lg flex items-center p-2">
+              <Link
+                to={item.href}
+                className="text-lg flex items-center p-2 rounded-md"
+              >
                 <span className="mr-3">{item.icon}</span>
                 {item.label}
               </Link>
             </div>
           ))}
         </nav>
+
         <div className="space-y-2 mt-auto">
           {navItems.slice(-2).map((item) => (
             <div
               key={item.href}
-              className={`w-full justify-start cursor-pointer ${
+              className={`w-full justify-start cursor-pointer  rounded-lg5 ${
                 activeLink === item.href
                   ? "bg-blue-600 text-white"
-                  : "text-gray-700 hover:bg-blue-50"
+                  : "text-gray-700 hover:bg-blue-500 hover:text-white"
               }`}
               onClick={() => handleLinkClick(item.href)}
             >

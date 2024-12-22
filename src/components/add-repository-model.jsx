@@ -51,7 +51,7 @@ export function AddRepositoryModal({ onAddRepository }) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <div
-          className="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition-colors"
+          className="flex items-center gap-2 cursor-pointer"
           aria-label="Add Repository"
         >
           <svg

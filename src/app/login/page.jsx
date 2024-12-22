@@ -26,18 +26,6 @@ import subtract from "../../assets/subtract.png";
 export function LoginPage() {
   const [activeTab, setActiveTab] = useState("saas");
 
-  // const renderLoginButtons = (platforms) =>
-  //   platforms.map((img, index) => (
-  //     <Button
-  //       key={index}
-  //       variant="outline"
-  //       className="w-full bg-white border border-gray-300 rounded-md p-3 hover:bg-blue-50 hover:border-blue-400 transition duration-200 ease-in-out flex items-center justify-center"
-  //     >
-  //       <img src={img} alt="Sign in" width={20} height={20} className="mr-3" />
-  //       Sign in with {img.split("/").pop().split(".")[0]}
-  //     </Button>
-  //   ));
-
   return (
     <div className="flex flex-col md:flex-row items-center">
       {/* First Section */}
@@ -139,89 +127,101 @@ export function LoginPage() {
 
               <TabsContent value="saas">
                 <div className="space-y-4 flex flex-col items-center min-h-[300px] w-full">
-                  <Button
-                    variant="outline"
+                  <Link
+                    to="/repositories"
                     className="w-3/4 bg-white rounded-md border border-gray-300"
                   >
-                    <img
-                      src={github}
-                      alt="Company Logo"
-                      width={16}
-                      height={16}
-                      className="mr-2"
-                    />
-                    Sign in with Github
-                  </Button>
-                  <Button
-                    variant="outline"
+                    <Button variant="outline">
+                      <img
+                        src={github}
+                        alt="GitHub"
+                        width={16}
+                        height={16}
+                        className="mr-2"
+                      />
+                      Sign in with Github
+                    </Button>
+                  </Link>
+                  <Link
+                    to="/repositories"
                     className="w-3/4 bg-white rounded-md border border-gray-300"
                   >
-                    <img
-                      src={bitbucket}
-                      alt="Company Logo"
-                      width={16}
-                      height={16}
-                      className="mr-2"
-                    />
-                    Sign in with Bitbucket
-                  </Button>
-                  <Button
-                    variant="outline"
+                    <Button variant="outline">
+                      <img
+                        src={bitbucket}
+                        alt="Bitbucket"
+                        width={16}
+                        height={16}
+                        className="mr-2"
+                      />
+                      Sign in with Bitbucket
+                    </Button>
+                  </Link>
+                  <Link
+                    to="/repositories"
                     className="w-3/4 bg-white rounded-md border border-gray-300"
                   >
-                    <img
-                      src={devop}
-                      alt="Company Logo"
-                      width={16}
-                      height={16}
-                      className="mr-2"
-                    />
-                    Sign in with Azure DevOps
-                  </Button>
-                  <Button
-                    variant="outline"
+                    <Button variant="outline">
+                      <img
+                        src={devop}
+                        alt="Azure DevOps"
+                        width={16}
+                        height={16}
+                        className="mr-2"
+                      />
+                      Sign in with Azure DevOps
+                    </Button>
+                  </Link>
+                  <Link
+                    to="/repositories"
                     className="w-3/4 bg-white rounded-md border border-gray-300"
                   >
-                    <img
-                      src={gitlab}
-                      alt="Company Logo"
-                      width={16}
-                      height={16}
-                      className="mr-2"
-                    />
-                    Sign in with GitLab
-                  </Button>
+                    <Button variant="outline">
+                      <img
+                        src={gitlab}
+                        alt="GitLab"
+                        width={16}
+                        height={16}
+                        className="mr-2"
+                      />
+                      Sign in with GitLab
+                    </Button>
+                  </Link>
                 </div>
               </TabsContent>
 
               <TabsContent value="self-hosted">
                 <div className="space-y-4 flex flex-col items-center min-h-[300px] w-full">
-                  <Button
-                    variant="outline"
+                  <Link
+                    to="/repositories"
                     className="w-3/4 bg-white rounded-md border border-gray-300"
                   >
-                    <img
-                      src={gitlab}
-                      alt="Company Logo"
-                      width={16}
-                      height={16}
-                      className="mr-2"
-                    />
-                    Sign in with GitLab
-                  </Button>
-                  <Button
-                    variant="outline"
+                    <Button variant="outline">
+                      <img
+                        src={gitlab}
+                        alt="GitLab"
+                        width={16}
+                        height={16}
+                        className="mr-2"
+                      />
+                      Sign in with GitLab
+                    </Button>
+                  </Link>
+                  <Link
+                    to="/repositories"
                     className="w-3/4 bg-white rounded-md border border-gray-300"
                   >
-                    <img
-                      src={key}
-                      alt="Company Logo"
-                      width={16}
-                      height={16}
-                      className="mr-2"
-                    />
-                    Sign in with SSO
-                  </Button>
+                    <Button variant="outline">
+                      <img
+                        src={key}
+                        alt="SSO"
+                        width={16}
+                        height={16}
+                        className="mr-2"
+                      />
+                      Sign in with SSO
+                    </Button>
+                  </Link>
                 </div>
               </TabsContent>
             </Tabs>

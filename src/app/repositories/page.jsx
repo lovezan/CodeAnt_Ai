@@ -11,6 +11,7 @@ import {
 import { Input } from "../../components/ui/input";
 import { Badge } from "../../components/ui/badge";
 import { Sidebar } from "../../components/slidebar";
+import { GoDotFill } from "react-icons/go";
 import { FiSearch, FiCircle, FiDatabase } from "react-icons/fi"; // Import the search icon
 
 import { Loader2 } from "lucide-react";
@@ -144,9 +145,9 @@ export function RepositoriesPage() {
   return (
     <div className="flex h-screen flex-col md:flex-row">
       <Sidebar />
-      <div className="flex-1 overflow-auto">
-        <div className="p-4 md:p-8">
-          <Card>
+      <div className="flex-1 overflow-auto bg-gray-100">
+        <div className="p-4  md:p-8  ">
+          <Card className="bg-white">
             <CardHeader>
               <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                 {/* Repositories Header */}
@@ -161,7 +162,7 @@ export function RepositoriesPage() {
                 </div>
 
                 {/* Buttons for Refresh and Add Repository */}
-                <div className="flex flex-row justify-between items-center mt-4 md:mt-0 space-x-2">
+                <div className="flex flex-row justify-between items-center mt-4 p-0 md:mt-0 space-x-2 p-0">
                   {/* Refresh Button */}
                   <Button
                     variant="outline"
@@ -193,45 +194,47 @@ export function RepositoriesPage() {
               </div>
             </CardHeader>
 
-            <CardContent>
-              <div className="relative mb-4">
-                <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <CardContent className="p-0">
+              <div className="relative mb-4 pl-6 rounded-lg">
+                <FiSearch className="absolute left-8 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
                 <Input
                   placeholder="Search Repositories"
-                  className="pl-12"
+                  className="pl-10 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-64"
                   value={searchTerm}
                   onChange={handleSearch}
                 />
               </div>
 
-              <div className="space-y-4">
+              {/* <hr className="border-gray-300" /> */}
+              <div className="space-y-0">
                 {filteredRepositories
-                  .slice(0, showAll ? filteredRepositories.length : 5)
+                  .slice(0, showAll ? filteredRepositories.length : 8)
                   .map((repo) => (
                     <div
                       key={repo.name}
-                      className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 border rounded-lg1"
+                      className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 border rounded-lg hover:bg-gray-100 transition-colors"
                     >
                       <div className="flex flex-col md:flex-col justify-between items-start space-y-2 md:space-y-0">
+                        {/* Public/Private Label */}
                         <div className="flex items-center space-x-2">
                           <h3 className="font-medium text-lg">{repo.name}</h3>
-                          <Badge
-                            variant={repo.isPublic ? "solid" : "outline"}
-                            className={`text-xs ${
+                          <span
+                            className={`text-xs font-medium px-3 py-1 rounded-2xl ${
                               repo.isPublic
                                 ? "bg-blue-100 text-blue-600 border border-blue-300"
-                                : "bg-blue-100 text-blue-600 border border-blue-300"
+                                : "bg-blue-50 text-blue-600 border border-blue-300"
                             }`}
                           >
                             {repo.isPublic ? "Public" : "Private"}
-                          </Badge>
+                          </span>
                         </div>
 
+                        {/* Additional Details */}
                         <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-1">
-                          <div className="flex items-center space-x-3">
+                          <div className="flex items-center space-x-0">
                             <span>{repo.language}</span>
                             {/* Solid Circle */}
-                            <span className="h-2 w-2 bg-blue-500 rounded-full"></span>
+                            <GoDotFill className="text-blue-500" />
                           </div>
                           <div className="flex items-center space-x-3">
                             {/* Database Icon */}

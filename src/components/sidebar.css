@@ -12,7 +12,7 @@
   background-color: transparent;
 }
 
-#navbuttons {
+.NavbarButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@
 
 /* Hover effect: change background color on hover */
 
-#navbuttons {
+.NavbarButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,3 +49,7 @@
 }
 
 /* Hover effect: change background color on hover */
+div input {
+  border-radius: 10px !important;
+}
+
